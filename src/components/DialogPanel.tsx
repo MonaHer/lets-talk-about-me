@@ -44,7 +44,7 @@ export function DialogPanel({ step, voices, visited, onChoose }: Props) {
             </span>
             <span className="voice-role">
               {voice.role}
-              {voice.imagined && " · erfundene Annäherung"}
+              {voice.imagined && " · Erfundene Annäherung"}
             </span>
           </div>
         )}

@@ -37,9 +37,7 @@ export default function App() {
 
   return (
     <div className="page">
-      <header className="topbar">
-        <span className="brand">Ein Gespräch mit R 537</span>
-      </header>
+      <header className="topbar"></header>
 
       <main className="stage">
         <div className="portrait">
@@ -63,6 +61,13 @@ export default function App() {
         <p>{dialog.credit}</p>
         <p>
           Privater Bewerbungsprototyp, kein Angebot des Badischen Landesmuseums.
+        </p>
+        <p>
+          Dieser Prototyp zeigt vor allem ein Vermittlungskonzept und seine
+          technische Umsetzung. Die drei Gesprächspartner*innen sind fiktive
+          Figuren, die Inhalte beruhen auf öffentlich zugänglichen
+          Informationen, unter anderem den Objektdaten des Badischen
+          Landesmuseums. Quellen nenne ich auf Nachfrage gern.
         </p>
       </footer>
     </div>

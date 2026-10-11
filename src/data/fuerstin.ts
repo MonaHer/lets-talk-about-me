@@ -23,17 +23,17 @@ const questions: Record<VoiceId, QA[]> = {
       id: "f-name",
       question: "Warum steht ein anderer Name auf deinem Bild?",
       answer:
-        "Hinten steht „Dorothea Friederike“. Sie war mit dem Bruder meines Mannes verheiratet, also meine Schwägerin. Zwei Gräfinnen aus demselben Haus Hanau – vielleicht hat man uns deshalb verwechselt.",
+        "Hinten steht „Dorothea Friederike“. Sie war mit dem Bruder meines Mannes verheiratet, also meine Schwägerin. Zwei Gräfinnen aus demselben Haus Hanau - vielleicht hat man uns deshalb verwechselt.",
     },
     {
       id: "f-maler",
       question: "Hast du dem Maler Modell gesessen?",
       answer:
-        "Nein. Ich bin Ende 1704 gestorben, und dieses Bild wurde erst um 1775 gemalt. Der Maler kann mich nur von einem älteren Bild gekannt haben – falls ich es überhaupt bin.",
+        "Nein. Ich bin Ende 1704 gestorben, und dieses Bild wurde erst um 1775 gemalt. Der Maler kann mich nur von einem älteren Bild gekannt haben, falls ich es überhaupt bin.",
     },
     {
       id: "f-leben",
-      question: "Wie war dein Leben in Hanau?",
+      question: "Was erwartete man von dir als Gräfin?",
       answer:
         "Von einer Gräfin erwartete man vor allem einen Erben. Zwei meiner Kinder kamen tot zur Welt, meine Tochter Magdalene Katharine lebte nur ein halbes Jahr. Deshalb ging die Grafschaft später an die Familie meines Schwagers.",
     },
@@ -48,15 +48,21 @@ const questions: Record<VoiceId, QA[]> = {
   kunsthistorikerin: [
     {
       id: "k-mantel",
-      question: "Was verrät der Mantel?",
+      question: "Was trägt sie da?",
       answer:
-        "Das ist ein Fürstenmantel. Er zeigt den Rang an, nicht ihre Alltagskleidung. Die Fürsten derselben Bildergalerie tragen ihn ebenso – so wird aus einzelnen Menschen eine Ahnenreihe.",
+        "Über ihrem Kleid liegt ein Fürstenmantel. Den trug man nicht im Alltag, er zeigt ihren Rang an. Auch die Fürsten in derselben Bildergalerie tragen ihn. So wird aus einzelnen Menschen eine Ahnenreihe.",
+    },
+    {
+      id: "k-malweise",
+      question: "Wie ist das Bild gemalt?",
+      answer:
+        "Schau mal auf den Hintergrund: Er ist dunkel und ruhig gehalten, so tritt ihr Gesicht umso heller hervor. Die Übergänge sind weich gezeichnet, ohne harte Konturen. Das schmeichelt, denn ein Hofporträt sollte idealisieren und nicht jede Unebenheit zeigen.",
     },
     {
       id: "k-frisur",
-      question: "Woran erkennt man, wann das Bild entstand?",
+      question: "Woher weiß man, wann das Bild gemalt wurde?",
       answer:
-        "Gemalt ist es um 1775. Aber hochgekämmtes Haar mit langen Locken auf den Schultern trug man um 1700, um 1775 waren hohe, gepuderte Frisuren Mode. Meine Deutung: Hier wurde eine ältere Vorlage kopiert.",
+        "Es gehört zu einer Serie von Bildnissen, die um 1775 für die Bildergalerie im Karlsruher Schloss entstand. Seltsam ist nur die Frisur: Hochgekämmtes Haar mit langen Locken trug man um 1700. Meine Deutung: Der Maler hat eine ältere Vorlage kopiert.",
     },
     {
       id: "k-maler",
@@ -81,15 +87,15 @@ const questions: Record<VoiceId, QA[]> = {
     },
     {
       id: "p-inschrift",
-      question: "Stimmt die Beschriftung denn gar nicht?",
+      question: "Was steht auf der Rückseite des Bildes?",
       answer:
-        "Genau das ist der Krimi. Ein Bild von Dorothea Friederike gehörte nachweislich zur Galerie, sie war Caroline Luises Großmutter. Das Museum hält die Inschrift trotzdem für eine Verwechslung. Warum, müsste man im Archiv klären.",
+        "Eine Inschrift nennt Dorothea Friederike, Fürstin zu Hanau, geborene Markgräfin von Brandenburg-Ansbach. Ein Bild von ihr, der Großmutter Caroline Luises, gehörte nachweislich zur Galerie. Das Museum hält die Inschrift auf diesem Bild trotzdem für eine Verwechslung.",
     },
     {
       id: "p-verwechslung",
-      question: "Wie kann so eine Verwechslung passieren?",
+      question: "Wie kann man Bilder überhaupt verwechseln?",
       answer:
-        "Im 19. Jahrhundert wurden die Bilder mehrfach abgehängt und restauriert, dabei hat man Dargestellte öfter vertauscht. Auf dem Rahmen eines Nachbarbildes steht zum Beispiel „Magdalene Sibylle“ – gemeint ist eine ganz andere Prinzessin.",
+        "Im 19. Jahrhundert wurden die Bilder mehrfach abgehängt und restauriert, dabei hat man Dargestellte öfter vertauscht.",
     },
     {
       id: "p-plan",
@@ -110,11 +116,11 @@ const questions: Record<VoiceId, QA[]> = {
 
 const menuText: Record<VoiceId, string> = {
   fuerstin:
-    "Frag mich ruhig. Wer ich wirklich bin, weiß allerdings niemand so genau.",
+    "Endlich fragt mal jemand! Ich hänge hier schließlich nicht nur zur Dekoration.",
   kunsthistorikerin:
-    "Ich schaue mir an, wie das Bild gemacht ist. Was möchtest du wissen?",
+    "Ein Porträt ist nie nur ein Abbild. Was möchtest du darüber wissen?",
   provenienz:
-    "Ich verfolge, woher das Bild kommt und wo es überall war. Was interessiert dich?",
+    "Inventare, Rückseiten, alte Fotos: Hier bin ich der Detektiv. Frag mich!",
 };
 
 const switchLabel: Record<VoiceId, string> = {
