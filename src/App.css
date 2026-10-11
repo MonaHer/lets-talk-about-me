@@ -1,0 +1,294 @@
+:root {
+  --petrol: #3e8384;
+  --mauve: #7d7480;
+  --rose: #d9507a;
+  --magenta: #b83a8e;
+  --violett: #7a1a78;
+  --weiss: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Sora", system-ui, sans-serif;
+  color: var(--weiss);
+  background: linear-gradient(
+    170deg,
+    var(--petrol) 0%,
+    var(--mauve) 38%,
+    var(--rose) 72%,
+    var(--magenta) 100%
+  );
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-x: clip; /* verhindert seitliches Scrollen während der Animation */
+}
+
+/* --- Kopfzeile --- */
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pill {
+  border: 2px solid var(--weiss);
+  border-radius: 999px;
+  padding: 0.55rem 1.2rem;
+  font-weight: 600;
+}
+
+/* --- Bühne --- */
+.stage {
+  display: grid;
+  gap: 2rem;
+  flex: 1;
+}
+
+@media (min-width: 820px) {
+  .stage {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    align-items: start;
+    gap: 3.5rem;
+  }
+  .portrait {
+    position: sticky;
+    top: 1.25rem;
+  }
+}
+
+.dialog-wrap {
+  scroll-margin-top: 1rem;
+}
+
+/* --- Porträt --- */
+.object-image {
+  margin: 0;
+}
+
+.object-image img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+  border-radius: 1.5rem;
+}
+
+.caption {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* --- Avatare --- */
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid var(--weiss);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Stimme --- */
+.voice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.voice-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: var(--voice-color);
+  color: var(--on-voice);
+  font-weight: 800;
+  border-radius: 999px;
+  padding: 0.3rem 0.95rem 0.3rem 0.3rem;
+}
+
+.voice-role {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* --- Texte --- */
+.speech {
+  font-weight: 800;
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  line-height: 1.15;
+  margin: 0 0 2rem;
+}
+
+.speech--question {
+  margin-bottom: 1rem;
+}
+
+.answer {
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  font-weight: 400;
+  line-height: 1.55;
+  max-width: 60ch;
+  margin: 0 0 2rem;
+}
+
+/* --- Fragen --- */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font: inherit;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-align: left;
+  color: var(--on-voice);
+  background: var(--voice-color);
+  border: 2px solid var(--voice-color);
+  border-radius: 999px;
+  padding: 0.9rem 1.4rem;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    color 0.15s,
+    opacity 0.15s;
+}
+
+.option.is-visited {
+  opacity: 0.7;
+}
+
+.option:hover {
+  background: var(--weiss);
+  color: var(--violett);
+  border-color: var(--weiss);
+  opacity: 1;
+}
+
+.option:focus-visible {
+  outline: 3px solid var(--weiss);
+  outline-offset: 3px;
+}
+
+/* --- Stimmen wechseln --- */
+.switches {
+  margin-top: 1.75rem;
+}
+
+.switch-label {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin: 0 0 0.6rem;
+}
+
+.switch-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.3rem 1rem 0.3rem 0.3rem;
+  border-radius: 999px;
+  cursor: pointer;
+  color: var(--on-voice);
+  background: var(--voice-color);
+  border: 2px solid var(--weiss);
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.switch:hover {
+  background: var(--weiss);
+  color: var(--violett);
+}
+
+.switch:focus-visible {
+  outline: 3px solid var(--weiss);
+  outline-offset: 3px;
+}
+
+/* --- Gestaffeltes Hereingleiten von rechts --- */
+.anim {
+  animation: reinGleiten 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.anim-2 {
+  animation-delay: 0.08s;
+}
+.anim-3 {
+  animation-delay: 0.18s;
+}
+.anim-4 {
+  animation-delay: 0.28s;
+}
+.anim-5 {
+  animation-delay: 0.36s;
+}
+
+@keyframes reinGleiten {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim {
+    animation: none;
+  }
+}
+
+/* --- Fußzeile --- */
+.credit {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+.credit p {
+  margin: 0.2rem 0;
+}
+
+.option-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
