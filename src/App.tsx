@@ -63,11 +63,11 @@ export default function App() {
           Privater Bewerbungsprototyp, kein Angebot des Badischen Landesmuseums.
         </p>
         <p>
-          Dieser Prototyp zeigt vor allem ein Vermittlungskonzept und seine
-          technische Umsetzung. Die drei Gesprächspartner*innen sind fiktive
-          Figuren, die Inhalte beruhen auf öffentlich zugänglichen
-          Informationen, unter anderem den Objektdaten des Badischen
-          Landesmuseums. Quellen nenne ich auf Nachfrage gern.
+          Dieser Prototyp zeigt ein Vermittlungskonzept und seine technische
+          Umsetzung. Die drei Gesprächspartner*innen sind fiktive Figuren, die
+          Inhalte beruhen auf öffentlich zugänglichen Informationen, unter
+          anderem den Objektdaten des Badischen Landesmuseums. Quellen nenne ich
+          auf Nachfrage gern.
         </p>
       </footer>
     </div>
